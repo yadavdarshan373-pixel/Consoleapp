@@ -324,6 +324,5 @@ Focus on modern .NET libraries, regular expressions, basic APIs, error catching,
 * Day 99: Console Progress Bar: Build a dynamic, reusable loading graphic ([=====➔ ] 50%) that updates inline.
 * Day 100: Full Capstone Mini-ERP: Combine a file database, API rates, and inventory logic into a master system.
 
-------------------------------
-Would you like me to generate a structured calendar layout for these 100 days, or should we write the complete source code for Day 1 to get your challenge started?
+
 
