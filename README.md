@@ -194,6 +194,7 @@ Darshan Yadav
 ## 100-Day Project Ideas
 
 A list of C# console application ideas for a 100-day coding challenge, organized by topic and difficulty.
+
 ------------------------------
 ## 🟢 Days 1–15: Core Basics (Variables, Loops, Conditions)
 Focus on syntax, simple data types, logic control, and user input validation.
@@ -323,6 +324,4 @@ Focus on modern .NET libraries, regular expressions, basic APIs, error catching,
 * Day 98: Custom In-App Task Queue: Run tasks on multiple background threads to simulate multi-threaded processing.
 * Day 99: Console Progress Bar: Build a dynamic, reusable loading graphic ([=====➔ ] 50%) that updates inline.
 * Day 100: Full Capstone Mini-ERP: Combine a file database, API rates, and inventory logic into a master system.
-
-
 
