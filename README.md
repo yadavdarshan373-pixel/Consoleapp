@@ -19,6 +19,9 @@ A collection of beginner-friendly console applications built with C# and .NET 10
 | [Guess the Number](#2-guess-the-number) | Number-guessing game | Loops, `Random`, conditions |
 | [Student Grade Manager](#3-student-grade-manager) | Student result report | Classes, `Dictionary`, LINQ, `switch` |
 | [Birthyear](#4-birthyear) | Calculates birth year, age, and days lived | `DateOnly`, tuples, input validation |
+| [FizzBuzz](#5-fizzbuzz) | FizzBuzz with a custom limit and any number of labeled divisor rules | Loops, modulo, collections, input validation |
+| [Even/Odd Checker](#6-evenodd-checker) | Classifies an array of numbers and counts evens and odds | Arrays, loops, modulo, input validation |
+| [Temperature Converter](#7-temperature-converter) | Converts between Celsius, Fahrenheit, and Kelvin | `double`, `switch`, formulas, input validation |
 
 ---
 
@@ -131,10 +134,7 @@ Grade           :B
 -----------------------------------
 ```
 
-Run:
-```bash
-dotnet run --project ./StudentGradeManager/StudentGradeManager.csproj
-```
+This folder currently has no `.csproj` file, so the app cannot be launched with `dotnet run` yet.
 
 ---
 
@@ -144,6 +144,36 @@ A console app that calculates a person's birth year, age, and total days lived f
 Run:
 ```bash
 dotnet run --project ./Birthyear/Birthyear.csproj
+```
+
+---
+
+### 5. FizzBuzz
+Runs a sequence to a user-defined limit with any number of custom divisor and label rules. When a number matches multiple rules, their labels are combined in the order entered. The summary reports a count for each rule and for numbers that matched none.
+
+Run:
+```bash
+dotnet run --project ./FizzBuzz/FizzBuzz.csproj
+```
+
+---
+
+### 6. Even/Odd Checker
+Reads an array of integers, reports whether each number is even or odd, and displays the total count of each.
+
+Run:
+```bash
+dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj
+```
+
+---
+
+### 7. Temperature Converter
+Accepts a temperature and its current unit (Celsius, Fahrenheit, or Kelvin), then displays the equivalent values in the other two units.
+
+Run:
+```bash
+dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj
 ```
 
 ## Requirements
@@ -167,6 +197,10 @@ Consoleapp/
 ├── Calculator/
 ├── GuesstheNumber/
 ├── StudentGradeManager/
+├── Birthyear/
+├── FizzBuzz/
+├── EvenOddCheck/
+├── TemperatureConverter/
 ├── .gitignore
 └── README.md
 ```
@@ -178,6 +212,10 @@ Consoleapp/
 | Calculator | Methods, `switch`, `int.TryParse()`, input validation |
 | Guess the Number | `Random`, loops, conditions, attempt counter |
 | Student Grade Manager | Classes, `const`, `Dictionary`, LINQ, `switch`, string formatting (`:F2`, `{item,-15}`) |
+| Birthyear | `DateOnly`, tuples, date arithmetic, input validation |
+| FizzBuzz | Loops, modulo, collections, records, input validation |
+| Even/Odd Checker | Arrays, loops, modulo, `int.TryParse()` |
+| Temperature Converter | `double`, `switch`, temperature formulas, input validation |
 
 ## Roadmap
 - Add more mini projects (to-do list, bank account, quiz)
