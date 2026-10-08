@@ -1,8 +1,9 @@
 # Console Apps
 
-A collection of beginner-friendly console applications built with C# and .NET 10.
+A collection of beginner-friendly C# console applications built with .NET 10.
 
 ## Table of contents
+- [Overview](#overview)
 - [Projects](#projects)
 - [Requirements](#requirements)
 - [Getting started](#getting-started)
@@ -11,46 +12,34 @@ A collection of beginner-friendly console applications built with C# and .NET 10
 - [Roadmap](#roadmap)
 - [Author](#author)
 
+## Overview
+This repository contains small console-based programming exercises designed to practice core C# concepts such as variables, loops, conditionals, input validation, classes, arrays, and date/time logic. Each app is independent and can be run from its own project folder.
+
 ## Projects
 
-| Project | Description | Key concepts |
-|---------|-------------|--------------|
-| [Calculator](#1-calculator) | Menu-driven calculator | Methods, `switch`, input validation |
-| [Guess the Number](#2-guess-the-number) | Number-guessing game | Loops, `Random`, conditions |
-| [Student Grade Manager](#3-student-grade-manager) | Student result report | Classes, `Dictionary`, LINQ, `switch` |
-| [Birthyear](#4-birthyear) | Calculates birth year, age, and days lived | `DateOnly`, tuples, input validation |
-| [FizzBuzz](#5-fizzbuzz) | FizzBuzz with a custom limit and any number of labeled divisor rules | Loops, modulo, collections, input validation |
-| [Even/Odd Checker](#6-evenodd-checker) | Classifies an array of numbers and counts evens and odds | Arrays, loops, modulo, input validation |
-| [Temperature Converter](#7-temperature-converter) | Converts between Celsius, Fahrenheit, and Kelvin | `double`, `switch`, formulas, input validation |
+| Project | Description | Run command |
+|---------|-------------|------------|
+| [Calculator](#calculator) | Performs basic arithmetic with a menu and validation | `dotnet run --project ./Calculator/Calculator.csproj` |
+| [Guess the Number](#guess-the-number) | Random number guessing game with attempts and hints | `dotnet run --project ./GuesstheNumber/GuesstheNumber.csproj` |
+| [Student Grade Manager](#student-grade-manager) | Calculates total, percentage, and grade for multiple subjects | Not yet runnable as a standalone project |
+| [Birthyear](#birthyear) | Calculates age and days lived from a birth date | `dotnet run --project ./Birthyear/Birthyear.csproj` |
+| [FizzBuzz](#fizzbuzz) | Prints custom divisor-based output rules through a chosen limit | `dotnet run --project ./FizzBuzz/FizzBuzz.csproj` |
+| [Even/Odd Checker](#evenodd-checker) | Identifies even/odd numbers and counts them | `dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj` |
+| [Temperature Converter](#temperature-converter) | Converts Celsius, Fahrenheit, and Kelvin values | `dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj` |
+| [Factorial Calculator](#factorial-calculator) | Computes factorial values with validation | `dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj` |
+| [Leap Year Detector](#leap-year-detector) | Checks whether a year is leap year | `dotnet run --project ./LeapYearDetector/LeapYearDetector.csproj` |
+| [Table Generator](#table-generator) | Generates a multiplication table for a chosen number | `dotnet run --project ./TableGenerator/TableCreator.csproj` |
 
 ---
 
-### 1. Calculator
-A menu-driven calculator that performs basic arithmetic.
+### Calculator
+A menu-driven calculator for addition, subtraction, multiplication, and division.
 
-Features:
-- Menu with 4 operations: addition, subtraction, multiplication and division
-- Reads two numbers from the user and prints the result
-- Handles invalid input and division by zero without crashing
-
-How it works:
-1. The menu is displayed
-2. The user selects an operation
-3. The user enters the numbers
-4. The program calculates and prints the result
-
-Sample run:
-```
-===== Calculator =====
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-Choose an option: 1
-Enter first number: 12
-Enter second number: 8
-Result: 20
-```
+Key ideas:
+- Methods
+- `switch` statements
+- Input validation
+- Division-by-zero handling
 
 Run:
 ```bash
@@ -59,31 +48,14 @@ dotnet run --project ./Calculator/Calculator.csproj
 
 ---
 
-### 2. Guess the Number
-A number-guessing game. The computer picks a random number from 1 to 100, and you have 7 attempts to guess it.
+### Guess the Number
+A simple number guessing game where the user attempts to guess a random value between 1 and 100.
 
-Features:
-- Random number generated with the `Random` class
-- Maximum of 7 attempts
-- Hint after every wrong guess: "Too high" or "Too low"
-- Win or lose message at the end, with the correct number revealed on a loss
-
-How it works:
-1. The computer picks a number from 1 to 100
-2. The player enters a guess
-3. The game gives a higher or lower hint
-4. The loop repeats until the player guesses correctly or runs out of attempts
-
-Sample run:
-```
-I have picked a number from 1 to 100. You have 7 attempts.
-Attempt 1: 50
-Too low, guess higher.
-Attempt 2: 75
-Too high, guess lower.
-Attempt 3: 63
-Correct! You guessed it in 3 attempts.
-```
+Key ideas:
+- `Random`
+- Loops
+- Conditional logic
+- Attempt tracking
 
 Run:
 ```bash
@@ -92,54 +64,27 @@ dotnet run --project ./GuesstheNumber/GuesstheNumber.csproj
 
 ---
 
-### 3. Student Grade Manager
-Reads a student's name and roll number, then the marks of 5 subjects. It calculates the total, percentage and grade and prints a formatted report.
+### Student Grade Manager
+This project calculates a student's total, percentage, and grade using subject marks.
 
-Features:
-- Subjects and marks stored in a `Dictionary<string, int>`
-- Total calculated with LINQ (`Subject.Values.Sum()`)
-- Percentage and grade calculated with a `switch`
-- Input validation: roll number above 0, no empty or duplicate subject names, marks from 0 to 100
+Key ideas:
+- `Dictionary<string, int>`
+- LINQ
+- `switch`
+- String formatting
 
-Grading system:
-
-| Percentage | Grade |
-|------------|-------|
-| 90 - 100 | A |
-| 80 - 89 | B |
-| 60 - 79 | C |
-| 40 - 59 | D |
-| Below 40 | Fail |
-
-How it works: the percentage is divided by 10 and cast to `int` (e.g. 83.0 becomes 8), then a `switch` picks the grade for that band.
-
-Sample output:
-```
------------------------------------
-Name            : Rahul
-Roll Number     : 101
------------------------------------
-Subject          Marks
-Maths           90
-Science         85
-English         78
-Hindi           70
-Computer        92
------------------------------------
-Total           :415/500
------------------------------------
-Percentage      :83.00%
------------------------------------
-Grade           :B
------------------------------------
-```
-
-This folder currently has no `.csproj` file, so the app cannot be launched with `dotnet run` yet.
+Note:
+The folder currently does not include a project file, so it is not runnable via `dotnet run` yet.
 
 ---
 
-### 4. Birthyear
-A console app that calculates a person's birth year, age, and total days lived from their date of birth.
+### Birthyear
+Calculates a person's birth year, current age, and total days lived based on their date of birth.
+
+Key ideas:
+- `DateOnly`
+- Date arithmetic
+- Input validation
 
 Run:
 ```bash
@@ -148,8 +93,14 @@ dotnet run --project ./Birthyear/Birthyear.csproj
 
 ---
 
-### 5. FizzBuzz
-Runs a sequence to a user-defined limit with any number of custom divisor and label rules. When a number matches multiple rules, their labels are combined in the order entered. The summary reports a count for each rule and for numbers that matched none.
+### FizzBuzz
+Prints values from 1 to a chosen limit using custom divisor rules such as `Fizz`, `Buzz`, and `FizzBuzz`.
+
+Key ideas:
+- Loops
+- Modulo logic
+- Collections
+- Custom rules and summaries
 
 Run:
 ```bash
@@ -158,8 +109,14 @@ dotnet run --project ./FizzBuzz/FizzBuzz.csproj
 
 ---
 
-### 6. Even/Odd Checker
-Reads an array of integers, reports whether each number is even or odd, and displays the total count of each.
+### Even/Odd Checker
+Reads a list of integers and determines whether each one is even or odd while counting totals.
+
+Key ideas:
+- Arrays
+- Loops
+- Modulo checks
+- Input validation
 
 Run:
 ```bash
@@ -168,17 +125,70 @@ dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj
 
 ---
 
-### 7. Temperature Converter
-Accepts a temperature and its current unit (Celsius, Fahrenheit, or Kelvin), then displays the equivalent values in the other two units.
+### Temperature Converter
+Converts values between Celsius, Fahrenheit, and Kelvin.
+
+Key ideas:
+- `double`
+- Formulas
+- `switch`
+- Input validation
 
 Run:
 ```bash
 dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj
 ```
 
+---
+
+### Factorial Calculator
+Calculates the factorial of a number using a loop and validates the input.
+
+Key ideas:
+- Looping
+- Arithmetic operations
+- Input validation
+
+Run:
+```bash
+dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj
+```
+
+---
+
+### Leap Year Detector
+Checks whether a given year is a leap year according to standard Gregorian rules.
+
+Key ideas:
+- Conditionals
+- Date-related logic
+- Input validation
+
+Run:
+```bash
+dotnet run --project ./LeapYearDetector/LeapYearDetector.csproj
+```
+
+---
+
+### Table Generator
+Generates a clean multiplication table for a user-selected number.
+
+Key ideas:
+- Nested loops
+- Formatting output
+- Repetition logic
+
+Run:
+```bash
+dotnet run --project ./TableGenerator/TableCreator.csproj
+```
+
+---
+
 ## Requirements
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
-- Check your installation:
+- Verify installation:
 ```bash
 dotnet --version
 ```
@@ -187,22 +197,31 @@ dotnet --version
 ```bash
 git clone https://github.com/yadavdarshan373-pixel/Consoleapp.git
 cd Consoleapp
+```
+
+Then run any app you want:
+```bash
 dotnet run --project ./Calculator/Calculator.csproj
 ```
-Replace the project path to run any other app.
+
+Replace the project path with another app to run it.
 
 ## Repository structure
-```
+```text
 Consoleapp/
-├── Calculator/
-├── GuesstheNumber/
-├── StudentGradeManager/
 ├── Birthyear/
-├── FizzBuzz/
+├── Calculator/
 ├── EvenOddCheck/
+├── FactorialCalculator/
+├── FizzBuzz/
+├── GuesstheNumber/
+├── LeapYearDetector/
+├── StudentGradeManager/
+├── TableGenerator/
 ├── TemperatureConverter/
 ├── .gitignore
-└── README.md
+├── README.md
+└── obj/
 ```
 
 ## Concepts practiced
@@ -210,19 +229,22 @@ Consoleapp/
 | Project | Concepts |
 |---------|----------|
 | Calculator | Methods, `switch`, `int.TryParse()`, input validation |
-| Guess the Number | `Random`, loops, conditions, attempt counter |
-| Student Grade Manager | Classes, `const`, `Dictionary`, LINQ, `switch`, string formatting (`:F2`, `{item,-15}`) |
-| Birthyear | `DateOnly`, tuples, date arithmetic, input validation |
-| FizzBuzz | Loops, modulo, collections, records, input validation |
-| Even/Odd Checker | Arrays, loops, modulo, `int.TryParse()` |
-| Temperature Converter | `double`, `switch`, temperature formulas, input validation |
+| Guess the Number | `Random`, loops, conditions, attempt counters |
+| Student Grade Manager | `Dictionary`, LINQ, `switch`, formatting, totals |
+| Birthyear | `DateOnly`, tuples, date math, validation |
+| FizzBuzz | Loops, modulo, collections, rules, summaries |
+| Even/Odd Checker | Arrays, loops, modulo checks, validation |
+| Temperature Converter | `double`, formulas, `switch`, conversion logic |
+| Factorial Calculator | Loop accumulation, arithmetic, validation |
+| Leap Year Detector | Conditionals, leap-year rules, validation |
+| Table Generator | Nested loops, formatting, repetition |
 
 ## Roadmap
-- Add more mini projects (to-do list, bank account, quiz)
-- Split larger projects into separate files (Models, Services, Helpers)
-- Support multiple students in Student Grade Manager
-- Save and load data from files (JSON or CSV)
-- Add unit tests
+- Add more real-world mini projects
+- Split larger apps into model/service/helper files
+- Improve project consistency across folders
+- Add file-based persistence and data storage examples
+- Add automated tests for common logic
 
 ## Author
 Darshan Yadav
@@ -230,24 +252,26 @@ Darshan Yadav
 - GitHub: [yadavdarshan373-pixel](https://github.com/yadavdarshan373-pixel)
 
 ## 100-Day Project Ideas
-
 A list of C# console application ideas for a 100-day coding challenge, organized by topic and difficulty.
 
-------------------------------
-## 🟢 Days 1–15: Core Basics (Variables, Loops, Conditions)
-Focus on syntax, simple data types, logic control, and user input validation.
+### Days 1–15: Core Basics
+- Day 1: Hello User
+- Day 2: Simple Calculator
+- Day 3: Odd or Even Checker
+- Day 4: Temperature Converter
+- Day 5: FizzBuzz
+- Day 6: Factorial Calculator
+- Day 7: Multiplication Table Generator
+- Day 8: Leap Year Checker
+- Day 9: Vowel and Consonant Counter
+- Day 10: String Reverser
+- Day 11: Number Guessing Game
+- Day 12: Age Calculator
+- Day 13: Palindrome Checker
+- Day 14: Prime Number Checker
+- Day 15: Password Strength Checker
 
-* Day 1: Hello User: Ask for a name and age, then calculate the user's birth year.
-* Day 2: Simple Calculator: Perform basic arithmetic (+, -, *, /) with clean user input prompts.
-* Day 3: Odd or Even: Accept a series of numbers and identify which ones are odd or even.
-* Day 4: Temperature Converter: Convert values back and forth between Celsius, Fahrenheit, and Kelvin.
-* Day 5: FizzBuzz: Loop from 1 to 100, printing "Fizz", "Buzz", or "FizzBuzz" based on divisibility.
-* Day 6: Factorial Calculator: Calculate the factorial of a given integer using a standard loop.
-* Day 7: Multiplication Table Generator: Generate a clean, aligned mathematical table for any chosen number.
-* Day 8: Leap Year Checker: Determine if a given year is a leap year using logical operations.
-* Day 9: Vowel and Consonant Counter: Read a string and count how many vowels and consonants it contains.
-* Day 10: String Reverser: Reverse a string entered by the user without using built-in array operations.
-* Day 11: Number Guessing Game: The user guesses a computer-generated secret number with "high/low" hints.
+These ideas can be used as a roadmap for continuing the project collection beyond the current apps.
 * Day 12: Basic BMl Calculator: Calculate Body Mass Index based on height and weight inputs.
 * Day 13: Area & Perimeter Finder: Compute areas for rectangles, circles, and triangles based on user choices.
 * Day 14: Simple Timer: Count down from a specific number of seconds with a visual pause (Thread.Sleep).
