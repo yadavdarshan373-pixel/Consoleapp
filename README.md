@@ -28,6 +28,8 @@ This repository contains small console-based programming exercises designed to p
 | [Temperature Converter](#temperature-converter) | Converts Celsius, Fahrenheit, and Kelvin values | `dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj` |
 | [Factorial Calculator](#factorial-calculator) | Computes factorial values with validation | `dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj` |
 | [Leap Year Detector](#leap-year-detector) | Checks whether a year is leap year | `dotnet run --project ./LeapYearDetector/LeapYearDetector.csproj` |
+| [Vowel Count](#vowel-count) | Counts vowels and shows the breakdown for A, E, I, O, and U | `dotnet run --project ./Vovelcount/Vovelcount.csproj` |
+| [Reverse String](#reverse-string) | Reverses a user-entered string and shows the original and reversed output | `dotnet run --project ./ReverseString/ReverseString.csproj` |
 | [Table Generator](#table-generator) | Generates a multiplication table for a chosen number | `dotnet run --project ./TableGenerator/TableCreator.csproj` |
 
 ---
@@ -171,6 +173,38 @@ dotnet run --project ./LeapYearDetector/LeapYearDetector.csproj
 
 ---
 
+### Vowel Count
+Counts vowels in a user-entered string and displays individual totals for A, E, I, O, and U.
+
+Key ideas:
+- String iteration
+- `switch` logic
+- Counting logic
+- Input validation
+
+Run:
+```bash
+dotnet run --project ./Vovelcount/Vovelcount.csproj
+```
+
+---
+
+### Reverse String
+Reads a string from the user and reverses it character by character while validating the input.
+
+Key ideas:
+- String handling
+- Looping
+- Input validation
+- Output formatting
+
+Run:
+```bash
+dotnet run --project ./ReverseString/ReverseString.csproj
+```
+
+---
+
 ### Table Generator
 Generates a clean multiplication table for a user-selected number.
 
@@ -216,9 +250,11 @@ Consoleapp/
 ├── FizzBuzz/
 ├── GuesstheNumber/
 ├── LeapYearDetector/
+├── ReverseString/
 ├── StudentGradeManager/
 ├── TableGenerator/
 ├── TemperatureConverter/
+├── Vovelcount/
 ├── .gitignore
 ├── README.md
 └── obj/
@@ -237,6 +273,7 @@ Consoleapp/
 | Temperature Converter | `double`, formulas, `switch`, conversion logic |
 | Factorial Calculator | Loop accumulation, arithmetic, validation |
 | Leap Year Detector | Conditionals, leap-year rules, validation |
+| Vowel Count | `switch`, string iteration, counting logic, validation |
 | Table Generator | Nested loops, formatting, repetition |
 
 ## Roadmap
@@ -255,18 +292,18 @@ Darshan Yadav
 A list of C# console application ideas for a 100-day coding challenge, organized by topic and difficulty.
 
 ### Days 1–15: Core Basics
-- Day 1: Hello User
-- Day 2: Simple Calculator
-- Day 3: Odd or Even Checker
-- Day 4: Temperature Converter
-- Day 5: FizzBuzz
-- Day 6: Factorial Calculator
-- Day 7: Multiplication Table Generator
-- Day 8: Leap Year Checker
-- Day 9: Vowel and Consonant Counter
-- Day 10: String Reverser
-- Day 11: Number Guessing Game
-- Day 12: Age Calculator
+- ✅ Day 1: Hello User
+- ✅ Day 2: Simple Calculator
+- ✅ Day 3: Odd or Even Checker
+- ✅ Day 4: Temperature Converter
+- ✅ Day 5: FizzBuzz
+- ✅ Day 6: Factorial Calculator
+- ✅ Day 7: Multiplication Table Generator
+- ✅ Day 8: Leap Year Checker
+- ✅ Day 9: Vowel Count
+- ✅ Day 10: Reverse String
+- ✅ Day 11: Number Guessing Game
+- ✅ Day 12: Age Calculator
 - Day 13: Palindrome Checker
 - Day 14: Prime Number Checker
 - Day 15: Password Strength Checker
