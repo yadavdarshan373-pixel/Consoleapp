@@ -1,34 +1,37 @@
-# Hello User
+﻿# Hello User
 
-A simple C# console app that asks for the user's name and welcomes them to C#.
+## Overview
+This is a beginner-friendly console app that greets the user by name. It is designed to help new programmers understand the simplest flow of a C# program: read input, store it, and show output.
 
-## Description
-This project demonstrates basic user input handling, validation, and string formatting in a console application.
+## Core C# concepts used
+- Variables
+- Strings
+- Console input/output
+- Assignment operators
+- Basic syntax
 
-## Features
-- Prompts the user to enter their name
-- Rejects empty input, spaces, or tabs
-- Prints a personalized welcome message
+## How the program works
+1. The program asks the user for their name.
+2. The name is stored in a string variable.
+3. The program combines the name with a greeting message.
+4. The final message is displayed on the screen.
 
-## How it works
-1. The program asks the user to enter a name.
-2. It keeps asking until the input is not empty or whitespace.
-3. It prints: `Hello <name> Welcome to C#!`
+## Key logic explained
+This app introduces the most basic building blocks of C#: variables, string handling, and console output. It is often the first step in learning how user input becomes visible output.
 
-## Sample output
-```bash
-Enter your name: Rohit
-Hello Rohit Welcome to C#!
+```csharp
+string name = Console.ReadLine();
+Console.WriteLine($"Hello, {name}!");
 ```
 
-## Run the program
+## Learning takeaway
+Even a small project like this teaches the structure of a C# console application and helps learners understand input, variables, and output before moving to more advanced logic.
+
+## How to run
 ```bash
 dotnet run --project ./HelloUser/HelloUser.csproj
 ```
 
-## Concepts practiced
-- Variables
-- User input
-- String validation
-- `while` loops
-- String interpolation
+## Requirements
+- .NET 10 SDK
+- A terminal or command prompt
