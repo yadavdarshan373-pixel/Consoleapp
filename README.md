@@ -11,7 +11,7 @@ This repository contains small console-based exercises that help practice core C
 | --- | --- | --- | --- |
 | [Calculator](./Calculator/README.md) | `Calculator` | Performs arithmetic operations with input validation | `dotnet run --project ./Calculator/Calculator.csproj` |
 | [Birthyear](./Birthyear/README.md) | `Birthyear` | Calculates age and days lived from a birth date | `dotnet run --project ./Birthyear/Birthyear.csproj` |
-| [BMI Calculator](./BIMcalculator/README.md) | `BIMcalculator` | Calculates BMI from multiple unit combinations and compares global and Asian classifications | `dotnet run --project ./BIMcalculator/BIMcalculator.csproj` |
+| [BMI Calculator](./BIMcalculator/README.md) | `BMIcalculator` | Calculates BMI from multiple unit combinations and compares global and Asian classifications | `dotnet run --project ./BMIcalculator/BMIcalculator.csproj` |
 | [Even/Odd Checker](./EvenOddCheck/README.md) | `EvenOddCheck` | Checks whether a number is even or odd and counts values | `dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj` |
 | [Factorial Calculator](./FactorialCalculator/README.md) | `FactorialCalculator` | Computes factorial values with validation | `dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj` |
 | [FizzBuzz](./FizzBuzz/README.md) | `FizzBuzz` | Prints output based on divisor rules up to a selected limit | `dotnet run --project ./FizzBuzz/FizzBuzz.csproj` |
@@ -52,7 +52,7 @@ dotnet run --project ./Calculator/Calculator.csproj
 
 ```text
 Consoleapp/
-├── BIMcalculator/
+├── BMIcalculator/
 ├── Birthyear/
 ├── Calculator/
 ├── EvenOddCheck/
