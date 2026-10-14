@@ -1,35 +1,40 @@
-# Console Apps
+# Console App Practice Repository
 
 A collection of beginner-friendly C# console applications built with .NET 10.
 
 ## Overview
-This repository contains small console-based exercises that help practice core C# concepts such as variables, loops, conditionals, input validation, arrays, strings, classes, and date logic. Each project is kept independently runnable from its own folder.
+This repository contains small console-based exercises for learning core C# concepts such as variables, conditions, loops, strings, arrays, methods, input validation, and date logic. Each project is designed to be run independently from its own folder.
 
-## Projects
+## Available projects
 
 | Project | Folder | Description | Run command |
 | --- | --- | --- | --- |
-| [Calculator](./Calculator/README.md) | `Calculator` | Performs arithmetic operations with input validation | `dotnet run --project ./Calculator/Calculator.csproj` |
-| [Birthyear](./Birthyear/README.md) | `Birthyear` | Calculates age and days lived from a birth date | `dotnet run --project ./Birthyear/Birthyear.csproj` |
-| [BMI Calculator](./BIMcalculator/README.md) | `BMIcalculator` | Calculates BMI from multiple unit combinations and compares global and Asian classifications | `dotnet run --project ./BMIcalculator/BMIcalculator.csproj` |
-| [Even/Odd Checker](./EvenOddCheck/README.md) | `EvenOddCheck` | Checks whether a number is even or odd and counts values | `dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj` |
-| [Factorial Calculator](./FactorialCalculator/README.md) | `FactorialCalculator` | Computes factorial values with validation | `dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj` |
-| [FizzBuzz](./FizzBuzz/README.md) | `FizzBuzz` | Prints output based on divisor rules up to a selected limit | `dotnet run --project ./FizzBuzz/FizzBuzz.csproj` |
-| [Guess the Number](./GuesstheNumber/README.md) | `GuesstheNumber` | Lets the user guess a random number with hints and attempts | `dotnet run --project ./GuesstheNumber/GuesstheNumber.csproj` |
-| [Hello User](./HelloUser/README.md) | `HelloUser` | Simple greeting app that demonstrates basic console input/output | `dotnet run --project ./HelloUser/HelloUser.csproj` |
+| [Area & Perimeter](./Area&Perimeter/README.md) | `Area&Perimeter` | Calculates area and perimeter for basic shapes | `dotnet run --project ./Area&Perimeter/Area&Perimeter.csproj` |
+| [BMI Calculator](./BMIcalculator/README.md) | `BMIcalculator` | Calculates BMI using different input styles and compares health classifications | `dotnet run --project ./BMIcalculator/BIMcalculator.csproj` |
+| [Birthyear](./Birthyear/README.md) | `Birthyear` | Finds age-related details from a birth date | `dotnet run --project ./Birthyear/Birthyear.csproj` |
+| [Calculator](./Calculator/README.md) | `Calculator` | Performs simple arithmetic operations with validation | `dotnet run --project ./Calculator/Calculator.csproj` |
+| [Even/Odd Checker](./EvenOddCheck/README.md) | `EvenOddCheck` | Checks if a number is even or odd | `dotnet run --project ./EvenOddCheck/EvenOddCheck.csproj` |
+| [Factorial Calculator](./FactorialCalculator/README.md) | `FactorialCalculator` | Computes factorials with number checks | `dotnet run --project ./FactorialCalculator/FactorialCalculator.csproj` |
+| [FizzBuzz](./FizzBuzz/README.md) | `FizzBuzz` | Prints values according to FizzBuzz rules | `dotnet run --project ./FizzBuzz/FizzBuzz.csproj` |
+| [Guess the Number](./GuesstheNumber/README.md) | `GuesstheNumber` | Lets the user guess a random number with hints | `dotnet run --project ./GuesstheNumber/GuesstheNumber.csproj` |
+| [Hello User](./HelloUser/README.md) | `HelloUser` | Prints a welcome message using user input | `dotnet run --project ./HelloUser/HelloUser.csproj` |
 | [Leap Year Detector](./LeapYearDetector/README.md) | `LeapYearDetector` | Checks whether a year is a leap year | `dotnet run --project ./LeapYearDetector/LeapYearDetector.csproj` |
-| [Palindrome Checker](./PalindromeChecker/README.md) | `PalindromeChecker` | Verifies whether a string reads the same backward and forward | `dotnet run --project ./PalindromeChecker/PalindromeChecker.csproj` |
-| [Password Strength Checker](./PasswordStrengthChecker/README.md) | `PasswordStrengthChecker` | Evaluates password strength based on length and character rules | `dotnet run --project ./PasswordStrengthChecker/PasswordStrengthChecker.csproj` |
-| [Prime Number Checker](./PrimeNumberChecker/README.md) | `PrimeNumberChecker` | Tests if a number is prime using a simple optimization | `dotnet run --project ./PrimeNumberChecker/PrimeNumberChecker.csproj` |
-| [Reverse String](./ReverseString/README.md) | `ReverseString` | Reverses user input and displays the original and reversed strings | `dotnet run --project ./ReverseString/ReverseString.csproj` |
-| [Student Grade Manager](./StudentGradeManager/README.md) | `StudentGradeManager` | Example grade calculation project for academic records | Run manually as a learning exercise |
-| [Table Generator](./TableGenerator/README.md) | `TableGenerator` | Generates multiplication tables for a chosen number | `dotnet run --project ./TableGenerator/TableCreator.csproj` |
-| [Temperature Converter](./TemperatureConverter/README.md) | `TemperatureConverter` | Converts between Celsius, Fahrenheit, and Kelvin | `dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj` |
+| [Palindrome Checker](./PalindromeChecker/README.md) | `PalindromeChecker` | Verifies whether a word or sentence reads the same backward | `dotnet run --project ./PalindromeChecker/PalindromeChecker.csproj` |
+| [Password Strength Checker](./PasswordStrengthChecker/README.md) | `PasswordStrengthChecker` | Evaluates password strength based on rules | `dotnet run --project ./PasswordStrengthChecker/PasswordStrengthChecker.csproj` |
+| [Prime Number Checker](./PrimeNumberChecker/README.md) | `PrimeNumberChecker` | Determines if a number is prime | `dotnet run --project ./PrimeNumberChecker/PrimeNumberChecker.csproj` |
+| [Reverse String](./ReverseString/README.md) | `ReverseString` | Reverses a string and shows the original result | `dotnet run --project ./ReverseString/ReverseString.csproj` |
+| [Student Grade Manager](./StudentGradeManager/README.md) | `StudentGradeManager` | Practice project for grade-related logic and academic records | Manual exercise; no standalone project file is included yet |
+| [Table Generator](./TableGenerator/README.md) | `TableGenerator` | Generates multiplication tables for a selected number | `dotnet run --project ./TableGenerator/TableCreator.csproj` |
+| [Temperature Converter](./TemperatureConverter/README.md) | `TemperatureConverter` | Converts temperature values between common units | `dotnet run --project ./TemperatureConverter/TemperatureConverter.csproj` |
 | [Vowel Count](./Vovelcount/README.md) | `Vovelcount` | Counts vowels in a string and shows the breakdown | `dotnet run --project ./Vovelcount/Vovelcount.csproj` |
+
+> Note: The folder and file names are not fully consistent across all projects. The commands above use the exact project file names that exist in the repository.
 
 ## Requirements
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
-- Confirm that the SDK is installed:
+- A terminal or command prompt
+
+Check your installation:
 
 ```bash
 dotnet --version
@@ -52,6 +57,7 @@ dotnet run --project ./Calculator/Calculator.csproj
 
 ```text
 Consoleapp/
+├── Area&Perimeter/
 ├── BMIcalculator/
 ├── Birthyear/
 ├── Calculator/
@@ -69,33 +75,35 @@ Consoleapp/
 ├── TableGenerator/
 ├── TemperatureConverter/
 ├── Vovelcount/
-├── .gitignore
 ├── README.md
+├── README_TEMPLATE.md
+├── .gitignore
 ├── obj/
 └── .git/
 ```
 
 ## Concepts practiced
 
-These projects cover a range of beginner-to-intermediate C# topics including:
+These projects cover a range of beginner-to-intermediate C# topics, including:
 
 - variables and data types
+- arithmetic and comparison operators
 - conditional statements
 - loops and iteration
 - methods and functions
-- string manipulation
+- strings and character handling
 - arrays and collections
 - input validation
-- date/time handling
-- basic algorithms and problem solving
+- date and time logic
+- basic algorithm design and problem solving
 
 ## Roadmap
 
-- add more real-world mini projects
-- split larger logic into helper/service files
-- improve consistency across project naming and structure
-- add automated tests for utilities and logic
-- explore file-based data persistence examples
+- add more real-world micro-projects
+- improve naming consistency across folders and project files
+- split logic into reusable helper files where useful
+- add automated tests for common logic patterns
+- explore file-based and database-driven examples
 
 ## Author
 
@@ -104,4 +112,4 @@ These projects cover a range of beginner-to-intermediate C# topics including:
 
 ---
 
-This README is intended to serve as a project index for the repository and a quick way to discover available .NET console apps and their commands.
+This README serves as a repository index and quick guide for the available .NET console apps in this workspace.
